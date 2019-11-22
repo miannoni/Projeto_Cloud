@@ -11,9 +11,9 @@ def Tarefa():
     if request.method == 'GET':
         return dicionario.dict
     if request.method == 'POST':
-        dicionario.add_coisa(request.form['coisa'])
+        dicionario.add_coisa(request.form)
         resp = jsonify(success=True)
-        return request.form['coisa']
+        return dicionario.dict
 
 @app.route('/Tarefa/<id>', methods=['GET', 'PUT', 'DELETE'])
 def Tarefa_id(id):
