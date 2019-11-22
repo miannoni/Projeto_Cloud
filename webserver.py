@@ -24,7 +24,7 @@ def Tarefa_id(id):
         resp = jsonify(success = False)
         return resp
     if request.method == 'PUT':
-        resp = dicionario.update_coisa(id, request.form['coisa'])
+        resp = dicionario.update_coisa(id, request.form)
         resp = jsonify(success=(resp != False))
         return resp
     if request.method == 'DELETE':
