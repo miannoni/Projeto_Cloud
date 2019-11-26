@@ -1,3 +1,8 @@
+from time import sleep
+import os
+import sys
+import requests
+
 from tarefas import *
 from flask import Flask
 from flask import jsonify
